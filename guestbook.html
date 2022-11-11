@@ -4,13 +4,13 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width">
-  <title>replit</title>
+  <title>guestbook</title>
   <link href="style.css" rel="stylesheet" type="text/css" />
 </head>
 
 <body>
   <h1>Sign our guest list below!</h1>
-  <form action="#" onsubmit="submitForm(this.name, this.hometown)">
+  <form action="#" onsubmit="return submitForm(this.name.value, this.hometown.value)">
     <label>Name:</label>
     <input id="name"/><br />
     <label>Hometown:</label>
@@ -25,7 +25,6 @@
     -->
   </ol>
   <a href="index.html">Return to home page</a>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
   <script src="script.js"</script> 
 </body>
 

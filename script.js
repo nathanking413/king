@@ -33,7 +33,7 @@ function submitForm(name, hometown) {
   var  h = document.getElementById("hometown");
   //saveLocal(name, hometown);
   saveRemote(name, hometown);
-  guestlist.innerHTML += "<li>" + name + "." + hometown + "</li>";
+  guestlist.innerHTML += "<li>" + name + ". " + hometown + "</li>";
   n.value = "";
   h.value = "";
   n.focus();
@@ -47,4 +47,12 @@ function saveLocal(){
 
 function saveRemote(name, hometown){
 $.get("save.php", {"name":name,"hometown":hometown});
+}
+
+function loadRemote(){
+$.get("load.php", {},function(data){console.log(data);});
+}
+
+function clearStorageGB(){
+  
 }
